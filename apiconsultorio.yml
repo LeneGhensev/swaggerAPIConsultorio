@@ -66,6 +66,8 @@ paths:
           content:
             application/json:
               example: "Not Found"
+security: 
+- auth: []
 components:
   schemas:
     Especialidade:
@@ -79,3 +81,8 @@ components:
       type: array
       items:
         $ref: "#/components/schemas/Especialidade"
+  securitySchemes:
+    auth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
